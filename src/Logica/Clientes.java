@@ -2,6 +2,7 @@
 package Logica;
 
 import java.io.Serializable;
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -13,25 +14,52 @@ public class Clientes implements Serializable{
     @Id
     @Column(name = "id")
     private int id;
+    @Basic
     @Column(name = "num_cliente")
     private int num_cliente;
+    @Basic
     @Column(name = "nombre_perro")
     private String nombre_perro;
+    @Basic
     @Column(name = "raza")
     private String raza;
+    @Basic
     @Column(name = "color")
     private String color;
+    @Basic
     @Column(name = "alergico")
     private boolean alergico;
+    @Basic
     @Column(name = "atencion_especial")
     private boolean atencion_especial;
+    @Basic
     @Column(name = "nombre_duenio")
     private String nombre_duenio;
+    @Basic
     @Column(name = "celular_duenio")
     private String celular_duenio;
+    @Basic
     @Column(name = "observaciones")
     private String observaciones;
 
+    public Clientes() {
+    }
+
+    public Clientes(int id, int num_cliente, String nombre_perro, String raza, String color, boolean alergico, boolean atencion_especial, String nombre_duenio, String celular_duenio, String observaciones) {
+        this.id = id;
+        this.num_cliente = num_cliente;
+        this.nombre_perro = nombre_perro;
+        this.raza = raza;
+        this.color = color;
+        this.alergico = alergico;
+        this.atencion_especial = atencion_especial;
+        this.nombre_duenio = nombre_duenio;
+        this.celular_duenio = celular_duenio;
+        this.observaciones = observaciones;
+    }
+
+    
+    
     public int getId() {
         return id;
     }
